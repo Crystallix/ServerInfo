@@ -1,0 +1,6 @@
+# Standard Deutsche Config
+# Farbcodes können mit '&' oder '§' verwendet werden
+# Für neue Zeilen im Chat benutze '{NL}'
+#
+# Dinge wie {0}, {1}, ... werden vom Plugin mit Spielernamen o.Ä. ersetzt
+serverinfo_message: '&l>> &r&aServerInfo &f&l<<&r {NL}&cVersion: &6{0}{NL}&cEntities: &6{1}{NL}&cOnline Spieler: &6{2}{NL}&cServer IP: &6{3}'

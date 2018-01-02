@@ -1,0 +1,22 @@
+name: ServerInfo
+main: ServerInfo\ServerInfo
+api:
+  - 1.0.0
+  - 3.0.0-ALPHA10
+version: 1.0.0
+author: pluginShop crew
+website: pluginShop.com
+commands:
+  serverinfo:
+    description: Get Server information
+    usage: /serverinfo
+    aliases: ["si"]
+    permission: serverinfo.serverinfo
+  lastseen:
+    description: Show the last time a player has been online
+    usage: /lastseen
+    permission: serverinfo.lastseen
+  playerip:
+    description: Shows a players IP
+    usage: /playerip
+    permission: serverinfo.playerip

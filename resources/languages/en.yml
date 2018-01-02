@@ -1,0 +1,7 @@
+# Default english config file
+#
+# Color codes can be used with '&' or '§'
+# New line in chat, use '{NL}'
+#
+# Things like {0}, {1}, ... are getting replaced by the plugin itself with playernames or other info
+serverinfo_message: '&l>> &r&aServerInfo &f&l<<&r {NL}&cVersion: &6{0}{NL}&cEntities: &6{1}{NL}&cOnline Players: &6{2}{NL}&cServer IP: &6{3}'
