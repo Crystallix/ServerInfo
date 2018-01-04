@@ -3,7 +3,7 @@ main: ServerInfo\ServerInfo
 api:
   - 1.0.0
   - 3.0.0-ALPHA10
-version: 1.1
+version: 1.2
 author: pluginShop crew
 website: pluginShop.com
 commands:
