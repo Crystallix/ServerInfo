@@ -7,6 +7,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use ServerInfo\autoupdater\AutoUpdater;
 use ServerInfo\lgsys\LanguageManager;
 
 class ServerInfo extends PluginBase
@@ -23,6 +24,8 @@ class ServerInfo extends PluginBase
         $dir = $this->getDataFolder() . DIRECTORY_SEPARATOR . "languages" . DIRECTORY_SEPARATOR;
         $this->createLanguages();
         $this->languageManager = new LanguageManager($dir);
+
+        AutoUpdater::searchForUpdates($this, "https://raw.githubusercontent.com/Crystallix/ServerInfo/master/updates.yml", $this->getDescription()->getVersion());
 
         $this->getLogger()->info(TextFormat::AQUA . "ServerInfo plugin started.");
     }
