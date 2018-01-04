@@ -1,3 +1,4 @@
-lastVersion: 1.0.0
+lastVersion: 1.1
 history:
   1.0.0: "First release"
+  1.1: "AutoUpdate support"
