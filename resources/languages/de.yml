@@ -4,3 +4,9 @@
 #
 # Dinge wie {0}, {1}, ... werden vom Plugin mit Spielernamen o.Ä. ersetzt
 serverinfo_message: '&l>> &r&aServerInfo &f&l<<&r {NL}&cVersion: &6{0}{NL}&cEntities: &6{1}{NL}&cOnline Spieler: &6{2}{NL}&cServer IP: &6{3}'
+lastseen_usage: '&cBenutze: {0}'
+lastseen_never_joined: '&cDer Spieler &e{0} &cwar noch nie auf dem Server.'
+lastseen_online: '&eDer Spieler &c{0} &eist momentan online.'
+lastseen_success: '&eDer Spieler &c{0} &ewurde zuletzt am §c{1} §eum §c{2}§e gesehen.'
+playerip_offline: '&cDer Spieler &e{0} &cist offline.'
+playerip_message: '&eDie IP von &c{0} &eist §c{1}§e.'
