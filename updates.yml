@@ -1,5 +1,6 @@
-lastVersion: 1.2
+lastVersion: 1.3
 history:
   1.0.0: "First release"
   1.1: "AutoUpdate support"
   1.2: "AutoUpdate fix"
+  1.3: "LastSeen and PlayerIP command added"

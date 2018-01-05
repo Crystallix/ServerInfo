@@ -5,3 +5,9 @@
 #
 # Things like {0}, {1}, ... are getting replaced by the plugin itself with playernames or other info
 serverinfo_message: '&l>> &r&aServerInfo &f&l<<&r {NL}&cVersion: &6{0}{NL}&cEntities: &6{1}{NL}&cOnline Players: &6{2}{NL}&cServer IP: &6{3}'
+lastseen_usage: '&cUsage: {0}'
+lastseen_never_joined: '&cThe player &e{0} &cnever joined this server.'
+lastseen_online: '&eThe player &c{0} &eis currently online.'
+lastseen_success: '&eThe player &c{0} &ehas been seen last on §c{1} §eat §c{2}§e.'
+playerip_offline: '&cThe player &e{0} &cis offline.'
+playerip_message: '&eThe IP of &c{0} &eis §c{1}§e.'

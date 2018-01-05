@@ -54,7 +54,43 @@ class ServerInfo extends PluginBase
                 case "serverinfo":
                     $this->getLanguageManager()->sendTranslation($sender, "serverinfo_message", $this->getServer()->getVersion(), sizeof($sender->getLevel()->getEntities()), sizeof($this->getServer()->getOnlinePlayers()), $this->getServer()->getIp());
                     return true;
-                // TODO: LastSeen, PlayerIP
+                case "lastseen":
+                    if (empty($args[0])) {
+                        $this->getLanguageManager()->sendTranslation($sender, "lastseen_usage", $cmd->getUsage());
+                        return true;
+                    }
+
+                    $offlinePlayer = $this->getServer()->getOfflinePlayer($args[0]);
+                    if (!$offlinePlayer->hasPlayedBefore()) {
+                        $this->getLanguageManager()->sendTranslation($sender, "lastseen_never_joined", $args[0]);
+                        return true;
+                    }
+
+                    $player = $offlinePlayer->getPlayer();
+                    if ($player !== null) {
+                        $this->getLanguageManager()->sendTranslation($sender, "lastseen_online", $player->getName());
+                        return true;
+                    }
+
+                    $date = date("d.m.y", $offlinePlayer->getLastPlayed() / 1000);
+                    $time = date("h:ia", $offlinePlayer->getLastPlayed() / 1000);
+
+                    $this->getLanguageManager()->sendTranslation($sender, "lastseen_success", $offlinePlayer->getName(), $date, $time);
+                    return true;
+                case "playerip":
+                    if (empty($args[0])) {
+                        $this->getLanguageManager()->sendTranslation($sender, "playerip_message", $sender->getName(), $sender->getAddress());
+                        return true;
+                    }
+
+                    $player = $this->getServer()->getPlayer($args[0]);
+                    if ($player === null) {
+                        $this->getLanguageManager()->sendTranslation($sender, "playerip_offline", $args[0]);
+                        return true;
+                    }
+
+                    $this->getLanguageManager()->sendTranslation($sender, "playerip_message", $player->getName(), $player->getAddress());
+                    return true;
             }
         }
         return true;
